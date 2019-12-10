@@ -4,8 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "Caching\Caching.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{793A0A8E-7EF6-4DAC-8658-CC1647E53B55}"
 ProjectSection(SolutionItems) = preProject
-	appveyor.yml = appveyor.yml
 	README.md = README.md
+	appveyor.yml = appveyor.yml
 EndProjectSection
 EndProject
 Global
