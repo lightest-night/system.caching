@@ -1,7 +1,7 @@
 image: Visual Studio 2019
 
 install:
-  - choco install gitversion.portable --version 4.0.0 -y
+  - choco install gitversion.portable --version 5.0.0 -y
 
 pull_requests:
   do_not_increment_build_number: true
