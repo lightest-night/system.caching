@@ -14,7 +14,7 @@ namespace LightestNight.System.Caching
         /// <param name="expiry">If set, the expiry of this item; Default is 1 year</param>
         /// <param name="tags">Any tags to assign this item</param>
         /// <typeparam name="TItem">The type of the object being saved</typeparam>
-        Task Save<TItem>(string key, TItem item, DateTime? expiry = default, params string[] tags);
+        Task Save<TItem>(string key, TItem item, DateTime? expiry = default, params string[]? tags) where TItem : notnull;
 
         /// <summary>
         /// Gets an item from the cache
