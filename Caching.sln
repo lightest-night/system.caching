@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "Caching\Caching.csproj", "{A560C0ED-22DF-4539-A093-D9E90E83270B}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caching", "Caching\Caching.csproj", "{A560C0ED-22DF-4539-A093-D9E90E83270B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{793A0A8E-7EF6-4DAC-8658-CC1647E53B55}"
-ProjectSection(SolutionItems) = preProject
-	README.md = README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		icon.jpeg = icon.jpeg
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,5 +21,11 @@ Global
 		{A560C0ED-22DF-4539-A093-D9E90E83270B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A560C0ED-22DF-4539-A093-D9E90E83270B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A560C0ED-22DF-4539-A093-D9E90E83270B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BB83441-46A7-4C7D-919F-1D9398DC272F}
 	EndGlobalSection
 EndGlobal
