@@ -7,6 +7,14 @@ namespace LightestNight.System.Caching
     public interface ICache
     {
         /// <summary>
+        /// Denotes whether an item exists in the cache
+        /// </summary>
+        /// <param name="key">The key to check the cache for</param>
+        /// <typeparam name="TItem">The type of the object that is being looked for</typeparam>
+        /// <returns>Boolean denoting whether item exists</returns>
+        Task<bool> Exists<TItem>(string key);
+        
+        /// <summary>
         /// Saves an item to the cache
         /// </summary>
         /// <param name="key">The key to save the item under</param>
