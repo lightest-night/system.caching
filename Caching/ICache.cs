@@ -30,7 +30,7 @@ namespace LightestNight.System.Caching
         /// <param name="cacheItem">A <see cref="CacheItem" /> container object holding the <typeparamref name="TItem" /> object and all cache metadata</param>
         /// <typeparam name="TItem">The type of the object being saved</typeparam>
         /// <remarks>No different to Save(key, item, expiry, tags), except requires the <see cref="CacheItem" /> object to be constructed by the consumer</remarks>
-        Task Save<TItem>(CacheItem cacheItem) where TItem : notnull;
+        Task Save<TItem>(CacheItem<TItem> cacheItem) where TItem : notnull;
 
         /// <summary>
         /// Gets an item from the cache
