@@ -25,20 +25,28 @@ namespace LightestNight.System.Caching
         Task Save<TItem>(string key, TItem item, DateTime? expiry = default, params string[]? tags) where TItem : notnull;
 
         /// <summary>
+        /// Saves an item to the cache
+        /// </summary>
+        /// <param name="cacheItem">A <see cref="CacheItem" /> container object holding the <typeparamref name="TItem" /> object and all cache metadata</param>
+        /// <typeparam name="TItem">The type of the object being saved</typeparam>
+        /// <remarks>No different to Save(key, item, expiry, tags), except requires the <see cref="CacheItem" /> object to be constructed by the consumer</remarks>
+        Task Save<TItem>(CacheItem cacheItem) where TItem : notnull;
+
+        /// <summary>
         /// Gets an item from the cache
         /// </summary>
         /// <param name="key">The key to get the item</param>
         /// <typeparam name="TItem">The type of the object being retrieved</typeparam>
-        /// <returns>The instance of <typeparamref name="TItem" /> found in the cache. If nothing found returns default</returns>
-        Task<TItem> Get<TItem>(string key);
+        /// <returns>A <see cref="CacheItem" /> instance containing the instance of <typeparamref name="TItem" /> found in the cache. If nothing found returns default</returns>
+        Task<CacheItem<TItem>> Get<TItem>(string key);
 
         /// <summary>
         /// Gets items from the cache by their associated tag
         /// </summary>
         /// <param name="tag">The tag to find the items under</param>
         /// <typeparam name="TItem">The type of the object being retrieved</typeparam>
-        /// <returns>A collection of <typeparamref name="TItem" /> instances found in the cache. If nothing found returns an empty collection</returns>
-        Task<IEnumerable<TItem>> GetByTag<TItem>(string tag);
+        /// <returns>A collection of <see cref="CacheItem" /> instances containing <typeparamref name="TItem" /> instances found in the cache. If nothing found returns an empty collection</returns>
+        Task<IEnumerable<CacheItem<TItem>>> GetByTag<TItem>(string tag);
 
         /// <summary>
         /// Deletes the cache item under the given key
